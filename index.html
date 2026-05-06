@@ -91,7 +91,7 @@
   <!-- Navigation -->
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Hauptnavigation">
-      <a href="#top" class="nav-logo" aria-label="Spenglerei Wögini – Startseite">
+      <a href="#hero" class="nav-logo" aria-label="Spenglerei Wögini – Startseite">
         <span class="nav-logo-letter">A</span><span class="nav-logo-pipe">|</span><span class="nav-logo-letter">W</span>
       </a>
       <a href="#kontakt" class="btn btn-primary btn-nav nav-cta-mobile">Anfragen</a>
@@ -602,8 +602,8 @@
         if (!dragging) wrapScroll();
       });
 
-      // Pause on hover
-      strip.addEventListener('mouseenter', () => { autoScroll = false; });
+      // Pause on hover (desktop only)
+      strip.addEventListener('mouseenter', () => { if (!('ontouchstart' in window)) autoScroll = false; });
       strip.addEventListener('mouseleave', () => { if (!dragging) autoScroll = true; });
 
       // Touch drag to scroll (prevent vertical scroll when dragging horizontally)
@@ -636,6 +636,7 @@
         }
       }, { passive: false });
       strip.addEventListener('touchend', () => { autoScroll = true; touchDragging = false; });
+      strip.addEventListener('touchcancel', () => { autoScroll = true; touchDragging = false; });
 
       // Drag to scroll
       strip.addEventListener('mousedown', (e) => {
