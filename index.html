@@ -612,7 +612,6 @@
       // Touch drag to scroll (prevent vertical scroll when dragging horizontally)
       let touchStartX, touchStartY, touchScrollStart, touchDragging = false;
       strip.addEventListener('touchstart', (e) => {
-        autoScroll = false;
         touchStartX = e.touches[0].pageX;
         touchStartY = e.touches[0].pageY;
         touchScrollStart = strip.scrollLeft;
@@ -623,6 +622,7 @@
         const dy = e.touches[0].pageY - touchStartY;
         if (!touchDragging && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 5) {
           touchDragging = true;
+          autoScroll = false;
         }
         if (touchDragging) {
           e.preventDefault();

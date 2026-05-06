@@ -942,7 +942,6 @@ a:hover {
   margin-top: var(--space-10);
   overflow-x: auto;
   position: relative;
-  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   cursor: grab;
   user-select: none;
