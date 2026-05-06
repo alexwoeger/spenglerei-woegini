@@ -524,6 +524,24 @@
     );
     obs.observe(heroSection);
 
+    // Active nav link highlighting based on scroll position
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+    const sections = [...navLinks].map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const navObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      },
+      { threshold: 0, rootMargin: '-30% 0px -70% 0px' }
+    );
+    sections.forEach(sec => navObs.observe(sec));
+
     // Scroll-triggered 3D reveals
     const revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');
     const revealObs = new IntersectionObserver(
