@@ -88,6 +88,8 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Zum Inhalt springen</a>
+
   <!-- Navigation -->
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Hauptnavigation">
@@ -110,7 +112,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-inner">
@@ -130,7 +132,7 @@
         </div>
         <div class="hero-portrait">
           <div class="hero-portrait-frame">
-            <picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt="Spenglerarbeit – Detailansicht vom Dach" width="640" height="480" loading="eager" fetchpriority="high"></picture>
+            <picture><source srcset="img/hero.webp" type="image/webp"><img src="img/hero.jpg" alt="Spenglerarbeit – Detailansicht vom Dach" width="600" height="800" loading="eager" fetchpriority="high"></picture>
           </div>
         </div>
       </div>
@@ -391,7 +393,7 @@
                 <span class="stat-label">Jahre Erfahrung</span>
               </div>
               <div class="stat">
-                <span class="stat-number">100 km</span>
+                <span class="stat-number">100&nbsp;km</span>
                 <span class="stat-label">Einzugsgebiet</span>
               </div>
             </aside>
@@ -445,7 +447,7 @@
               <h3>Kontakt</h3>
               <p><a href="tel:+491702467819">+49 170 2467819</a></p>
               <p><a href="mailto:info@spenglerei-woegini.de">info@spenglerei-woegini.de</a></p>
-              <p>Mo – Do: 8:00 – 16:00 Uhr<br>Fr: 8:00 – 13:00 Uhr</p>
+              <p>Mo&nbsp;–&nbsp;Do: 8:00&nbsp;–&nbsp;16:00&nbsp;Uhr<br>Fr: 8:00&nbsp;–&nbsp;13:00&nbsp;Uhr</p>
             </div>
           </div>
           <div class="contact-cta">
@@ -567,7 +569,8 @@
     (() => {
       const strip = document.querySelector('.gallery-strip');
       if (!strip) return;
-      let autoScroll = true;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let autoScroll = !prefersReducedMotion;
       let speed = 1;
       let dragging = false;
       let isAutoScrolling = false;
