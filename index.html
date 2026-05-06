@@ -83,6 +83,14 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
+  <!-- Critical CSS inlined for faster FCP -->
+  <style>
+    :root{--black:#0a0a0a;--white:#ffffff;--gray-100:#f5f5f5;--gray-200:#e5e5e5;--gray-600:#525252;--gray-900:#171717;--color-surface:var(--white);--color-text-primary:var(--gray-900);--color-text-secondary:var(--gray-600);--color-accent:var(--black);--font-logo:Georgia,"Times New Roman",serif;--font-display:Georgia,"Times New Roman",serif;--font-body:Georgia,"Times New Roman",serif;--nav-height:72px;--space-4:1rem;--space-5:1.25rem;--space-8:2rem;--space-20:5rem;--space-32:8rem;--ease-out:cubic-bezier(0.16,1,0.3,1);--duration-fast:150ms;--duration-base:250ms;--z-nav:100;--container-max:1200px}*,*::before,*::after{box-sizing:border-box}html{font-size:16px;scroll-behavior:smooth;scroll-padding-top:var(--nav-height)}body{font-family:var(--font-body);font-size:1rem;line-height:1.65;color:var(--color-text-primary);background-color:var(--color-surface);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;margin:0}img{display:block;max-width:100%;height:auto}.site-header{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:var(--nav-height);background-color:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid transparent}.nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--container-max);margin:0 auto;padding:0 var(--space-8);height:100%}.nav-logo{display:flex;align-items:center;text-decoration:none}.nav-logo-letter{font-family:var(--font-logo);font-size:1.5rem;font-weight:400;color:var(--black);line-height:1}.nav-logo-pipe{font-family:var(--font-logo);font-size:1.4rem;font-weight:300;color:var(--black);margin:0 0.08em;line-height:1;opacity:0.6}.nav-toggle{display:none}.hero{padding-top:calc(var(--nav-height) + var(--space-20));padding-bottom:var(--space-32);background-color:#e8e8e8;position:relative;overflow:hidden}@media(max-width:768px){:root{--nav-height:64px}.nav{padding:0 var(--space-5)}.nav-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:48px;height:48px;padding:12px;background:none;border:none;cursor:pointer}.hero{padding-top:calc(var(--nav-height) + var(--space-8));padding-bottom:3rem}}
+  </style>
+
+  <link rel="preload" href="modern-normalize.css" as="style">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="img/hero.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="modern-normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -291,75 +299,60 @@
       <div class="gallery-strip">
         <div class="gallery-track">
           <figure class="gallery-item">
-            <picture><source srcset="img/work-1.webp" type="image/webp"><img src="img/work-1.jpg" alt="Spenglerarbeit – Detailansicht Blechverarbeitung" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-1.webp" type="image/webp"><img src="img/work-1.jpg" alt="Spenglerarbeit – Detailansicht Blechverarbeitung" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Blechverarbeitung – Präzises Zuschneiden und Formen von Blechen für individuelle Lösungen.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-2.webp" type="image/webp"><img src="img/work-2.jpg" alt="Dacharbeiten – Bleche und Falztechnik" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-2.webp" type="image/webp"><img src="img/work-2.jpg" alt="Dacharbeiten – Bleche und Falztechnik" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Falztechnik am Dach – Doppelstehfalz für maximale Dichtigkeit und lange Haltbarkeit.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-3.webp" type="image/webp"><img src="img/work-3.jpg" alt="Fassadenverkleidung aus Blech" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-3.webp" type="image/webp"><img src="img/work-3.jpg" alt="Fassadenverkleidung aus Blech" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Fassadenverkleidung – Wetterfeste Blechfassade für langlebigen Gebäudeschutz.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-4.webp" type="image/webp"><img src="img/work-4.jpg" alt="Dachentwässerung – Rinne und Fallrohr" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-4.webp" type="image/webp"><img src="img/work-4.jpg" alt="Dachentwässerung – Rinne und Fallrohr" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Dachentwässerung – Fachgerechte Montage von Rinnen und Fallrohren für sichere Ableitung.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-5.webp" type="image/webp"><img src="img/work-5.jpg" alt="Stehfalzdach – Präzisionsarbeit" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-5.webp" type="image/webp"><img src="img/work-5.jpg" alt="Stehfalzdach – Präzisionsarbeit" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Stehfalzdach – Handwerklich gefertigtes Metalldach mit sauberen Falzverbindungen.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-6.webp" type="image/webp"><img src="img/work-6.jpg" alt="Kaminverkleidung aus Blech" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-6.webp" type="image/webp"><img src="img/work-6.jpg" alt="Kaminverkleidung aus Blech" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Kaminverkleidung – Maßgefertigter Wetterschutz für Schornsteine und Durchdringungen.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-7.webp" type="image/webp"><img src="img/work-7.jpg" alt="Attikaabdeckung – saubere Ausführung" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-7.webp" type="image/webp"><img src="img/work-7.jpg" alt="Attikaabdeckung – saubere Ausführung" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Attikaabdeckung – Saubere Abdeckung der Dachkante zum Schutz vor Witterung.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-8.webp" type="image/webp"><img src="img/work-8.jpg" alt="Blechbearbeitung – Kantteile" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-8.webp" type="image/webp"><img src="img/work-8.jpg" alt="Blechbearbeitung – Kantteile" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Kantteile – Individuelle Sonderanfertigungen nach Maß, direkt aus der Werkstatt.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-9.webp" type="image/webp"><img src="img/work-9.jpg" alt="Flachdachabdichtung" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-9.webp" type="image/webp"><img src="img/work-9.jpg" alt="Flachdachabdichtung" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Flachdachabdichtung – Zuverlässige Abdichtung mit hochwertigen Materialien.</figcaption>
           </figure>
           <figure class="gallery-item">
-            <picture><source srcset="img/work-10.webp" type="image/webp"><img src="img/work-10.jpg" alt="Dachsanierung komplett" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-10.webp" type="image/webp"><img src="img/work-10.jpg" alt="Dachsanierung komplett" width="400" height="300" loading="lazy" decoding="async"></picture>
             <figcaption>Dachsanierung – Komplettlösung von der Analyse bis zur fertigen Neueindeckung.</figcaption>
           </figure>
-          <!-- Duplicated for seamless infinite scroll -->
+          <!-- Duplicated for seamless infinite scroll (reduced set) -->
           <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-1.webp" type="image/webp"><img src="img/work-1.jpg" alt="" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-1.webp" type="image/webp"><img src="img/work-1.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></picture>
           </figure>
           <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-2.webp" type="image/webp"><img src="img/work-2.jpg" alt="" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-2.webp" type="image/webp"><img src="img/work-2.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></picture>
           </figure>
           <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-3.webp" type="image/webp"><img src="img/work-3.jpg" alt="" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-3.webp" type="image/webp"><img src="img/work-3.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></picture>
           </figure>
           <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-4.webp" type="image/webp"><img src="img/work-4.jpg" alt="" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-4.webp" type="image/webp"><img src="img/work-4.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></picture>
           </figure>
           <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-5.webp" type="image/webp"><img src="img/work-5.jpg" alt="" width="400" height="300" loading="lazy"></picture>
-          </figure>
-          <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-6.webp" type="image/webp"><img src="img/work-6.jpg" alt="" width="400" height="300" loading="lazy"></picture>
-          </figure>
-          <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-7.webp" type="image/webp"><img src="img/work-7.jpg" alt="" width="400" height="300" loading="lazy"></picture>
-          </figure>
-          <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-8.webp" type="image/webp"><img src="img/work-8.jpg" alt="" width="400" height="300" loading="lazy"></picture>
-          </figure>
-          <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-9.webp" type="image/webp"><img src="img/work-9.jpg" alt="" width="400" height="300" loading="lazy"></picture>
-          </figure>
-          <figure class="gallery-item" aria-hidden="true">
-            <picture><source srcset="img/work-10.webp" type="image/webp"><img src="img/work-10.jpg" alt="" width="400" height="300" loading="lazy"></picture>
+            <picture><source srcset="img/work-5.webp" type="image/webp"><img src="img/work-5.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></picture>
           </figure>
         </div>
       </div>
@@ -373,7 +366,7 @@
         <div class="about-content">
           <div class="about-portrait" data-reveal="left">
             <div class="about-portrait-frame">
-              <picture><source srcset="img/portrait.webp" type="image/webp"><img src="img/portrait.jpg" alt="Alexander Wöger – Inhaber und Klempnermeister der Spenglerei Wögini" width="480" height="640" loading="lazy"></picture>
+              <picture><source srcset="img/portrait.webp" type="image/webp"><img src="img/portrait.jpg" alt="Alexander Wöger – Inhaber und Klempnermeister der Spenglerei Wögini" width="480" height="640" loading="lazy" decoding="async"></picture>
             </div>
             <p class="about-portrait-caption">Alexander Wöger<br><span>Inh. & Klempnermeister</span></p>
           </div>
@@ -487,6 +480,8 @@
   </footer>
 
   <script>
+    // Defer non-critical JS until after first paint
+    requestAnimationFrame(() => { requestAnimationFrame(() => {
     // Mobile nav toggle
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -593,6 +588,8 @@
       let dragging = false;
       let isAutoScrolling = false;
       let startX, scrollStart;
+      let rafId = null;
+      let galleryVisible = false;
 
       function getHalf() { return strip.scrollWidth / 2; }
 
@@ -609,7 +606,7 @@
         return 0;
       }
 
-      // Auto-scroll loop
+      // Auto-scroll loop — only runs when gallery is in viewport
       function tick() {
         if (autoScroll && !dragging && !galleryPausedByClick) {
           isAutoScrolling = true;
@@ -617,9 +614,21 @@
           wrapScroll();
           isAutoScrolling = false;
         }
-        requestAnimationFrame(tick);
+        if (galleryVisible) {
+          rafId = requestAnimationFrame(tick);
+        } else {
+          rafId = null;
+        }
       }
-      requestAnimationFrame(tick);
+
+      // Only animate when gallery is visible
+      const galleryVisObs = new IntersectionObserver(([entry]) => {
+        galleryVisible = entry.isIntersecting;
+        if (galleryVisible && !rafId) {
+          rafId = requestAnimationFrame(tick);
+        }
+      }, { threshold: 0 });
+      galleryVisObs.observe(galerieSection);
 
       // Wrap on native scroll (touch/wheel) when not auto-scrolling
       strip.addEventListener('scroll', () => {
@@ -698,6 +707,7 @@
         }
       });
     })();
+    }); });
   </script>
 </body>
 </html>

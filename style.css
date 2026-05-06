@@ -19,7 +19,7 @@
   --gray-200: #e5e5e5;
   --gray-300: #d4d4d4;
   --gray-400: #a3a3a3;
-  --gray-500: #737373;
+  --gray-500: #636363;
   --gray-600: #525252;
   --gray-700: #404040;
   --gray-800: #262626;
@@ -660,6 +660,8 @@ a:hover {
   padding: var(--space-20) 0;
   background-color: var(--color-surface);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 .services-grid {
@@ -842,6 +844,8 @@ a:hover {
   padding: var(--space-20) 0;
   background-color: var(--color-surface);
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
 }
 
 /* Subtle texture */
@@ -1029,6 +1033,7 @@ a:hover {
   margin: 0;
   box-shadow: var(--shadow-md);
   cursor: grab;
+  contain: layout style;
   /* 3D lift on hover */
   transform: perspective(600px) translateZ(0);
   transition: 
@@ -1286,7 +1291,6 @@ a:hover {
   transition:
     opacity 0.7s var(--ease-out),
     transform 0.7s var(--ease-out);
-  will-change: opacity, transform;
 }
 
 [data-reveal="up"] {
@@ -1500,6 +1504,12 @@ a:hover {
   .hero {
     padding-top: calc(var(--nav-height) + var(--space-8));
     padding-bottom: var(--space-12);
+  }
+
+  /* Disable expensive pseudo-element textures on mobile */
+  .hero::before,
+  .hero::after {
+    display: none;
   }
 
   .hero-inner {
@@ -1951,6 +1961,8 @@ a:hover {
 .kundenstimmen {
   padding: var(--space-20) 0;
   background-color: var(--color-surface-alt);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }
 
 .testimonials-grid {
