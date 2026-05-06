@@ -1267,6 +1267,15 @@ a:hover {
   margin-top: var(--space-2);
 }
 
+.footer-legal a {
+  color: var(--gray-300);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer-legal a:hover {
+  color: var(--white);
+}
+
 /* ===================================================
    ANIMATIONS
    =================================================== */
