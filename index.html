@@ -568,8 +568,9 @@
       const strip = document.querySelector('.gallery-strip');
       if (!strip) return;
       let autoScroll = true;
-      let speed = 0.5;
+      let speed = 1;
       let dragging = false;
+      let isAutoScrolling = false;
       let startX, scrollStart;
 
       function getHalf() { return strip.scrollWidth / 2; }
@@ -590,16 +591,18 @@
       // Auto-scroll loop
       function tick() {
         if (autoScroll && !dragging && !galleryPausedByClick) {
+          isAutoScrolling = true;
           strip.scrollLeft += speed;
           wrapScroll();
+          isAutoScrolling = false;
         }
         requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
 
-      // Wrap on native scroll (touch/wheel) when not dragging
+      // Wrap on native scroll (touch/wheel) when not auto-scrolling
       strip.addEventListener('scroll', () => {
-        if (!dragging) wrapScroll();
+        if (!dragging && !isAutoScrolling) wrapScroll();
       });
 
       // Pause on hover (only devices with a real mouse pointer)
