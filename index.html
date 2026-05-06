@@ -602,9 +602,12 @@
         if (!dragging) wrapScroll();
       });
 
-      // Pause on hover (desktop only)
-      strip.addEventListener('mouseenter', () => { if (!('ontouchstart' in window)) autoScroll = false; });
-      strip.addEventListener('mouseleave', () => { if (!dragging) autoScroll = true; });
+      // Pause on hover (only devices with a real mouse pointer)
+      const canHover = window.matchMedia('(hover: hover)').matches;
+      if (canHover) {
+        strip.addEventListener('mouseenter', () => { autoScroll = false; });
+        strip.addEventListener('mouseleave', () => { if (!dragging) autoScroll = true; });
+      }
 
       // Touch drag to scroll (prevent vertical scroll when dragging horizontally)
       let touchStartX, touchStartY, touchScrollStart, touchDragging = false;

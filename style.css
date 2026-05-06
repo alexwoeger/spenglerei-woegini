@@ -353,7 +353,7 @@ a:hover {
   height: 2px;
   background-color: var(--black);
   transition: 
-    transform var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
     opacity var(--duration-fast) var(--ease-out);
   transform-origin: center;
 }
@@ -377,6 +377,8 @@ a:hover {
   background-color: var(--black);
   top: 50%;
   left: 50%;
+  opacity: 0;
+  animation: fadeInX var(--duration-fast) var(--ease-out) 150ms forwards;
 }
 
 .nav-toggle[aria-expanded="true"]::before {
@@ -385,6 +387,10 @@ a:hover {
 
 .nav-toggle[aria-expanded="true"]::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@keyframes fadeInX {
+  to { opacity: 1; }
 }
 
 /* ===================================================
