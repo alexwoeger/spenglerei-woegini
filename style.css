@@ -1385,6 +1385,8 @@ a:hover {
     border: 2px solid var(--color-accent);
     border-left: none;
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
   }
 
   .nav-cta-desktop {
