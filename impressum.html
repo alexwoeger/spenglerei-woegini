@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Spenglerei Wögini</title>
+  <meta name="description" content="Impressum der Spenglerei Wögini – Spenglerei Alexander Wöger, Maybachstraße 1, 89233 Neu-Ulm.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://spenglerei-woegini.de/impressum.html">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="modern-normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="/" class="nav-logo" aria-label="Spenglerei Wögini – Startseite">
+        <span class="nav-logo-letter">A</span><span class="nav-logo-pipe">|</span><span class="nav-logo-letter">W</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="/#leistungen">Leistungen</a></li>
+        <li><a href="/#ueber-uns">Über Uns</a></li>
+        <li><a href="/#galerie">Galerie</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+        <li class="nav-cta"><a href="/#kontakt" class="btn btn-primary btn-nav">Jetzt anfragen</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-section legal-page">
+      <div class="container">
+        <h1 class="section-title">Impressum</h1>
+        <div class="legal-content">
+          <h3>Angaben gemäß § 5 TMG</h3>
+          <p>
+            Spenglerei Alexander Wöger<br>
+            Maybachstraße 1<br>
+            89233 Neu-Ulm (Burlafingen)
+          </p>
+
+          <h3>Kontakt</h3>
+          <p>
+            Telefon: +49 XXX XXXXXXX<br>
+            E-Mail: <a href="mailto:info@spenglerei-woegini.de">info@spenglerei-woegini.de</a>
+          </p>
+
+          <h3>Umsatzsteuer-ID</h3>
+          <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: wird ergänzt</p>
+
+          <h3>Berufsbezeichnung</h3>
+          <p>
+            Berufsbezeichnung: Klempnermeister / Bachelor Professional<br>
+            Zuständige Kammer: Handwerkskammer Ulm<br>
+            Verliehen in: Deutschland
+          </p>
+
+          <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+          <p>
+            Alexander Wöger<br>
+            Maybachstraße 1<br>
+            89233 Neu-Ulm
+          </p>
+
+          <h3>Streitschlichtung</h3>
+          <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+          <h3>Haftung für Inhalte</h3>
+          <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+          <h3>Haftung für Links</h3>
+          <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo" aria-hidden="true">
+            <span>A</span><span>|</span><span>W</span>
+          </div>
+          <p>Spenglerei Wögini<br><small>Inh. Alexander Wöger</small></p>
+        </div>
+        <div class="footer-links">
+          <a href="/#leistungen">Leistungen</a>
+          <a href="/#ueber-uns">Über Uns</a>
+          <a href="/#galerie">Galerie</a>
+          <a href="/#kontakt">Kontakt</a>
+        </div>
+        <div class="footer-legal">
+          <a href="/impressum.html">Impressum</a>
+          <a href="/datenschutz.html">Datenschutz</a>
+          <p>&copy; 2026 Spenglerei Alexander Wöger. Alle Rechte vorbehalten.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navMenu.classList.toggle('is-open');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('is-open');
+      });
+    });
+  </script>
+</body>
+</html>
