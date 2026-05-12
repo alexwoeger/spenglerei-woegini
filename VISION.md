@@ -5,7 +5,7 @@
 | Feld | Info |
 |------|------|
 | **Website-Name** | Spenglerei Wögini |
-| **Rechtsname** | Spenglerei Alexander Wöger |
+| **Rechtsname** | Spenglerei Wögini Inh. Alexander Wöger |
 | **Rechtsform** | Einzelunternehmen |
 | **Inhaber** | Alexander Wöger |
 | **Adresse** | Maybachstraße 1, 89233 Neu-Ulm (Burlafingen) |
