@@ -118,7 +118,7 @@
         <span class="nav-logo-letter">A</span><span class="nav-logo-pipe">|</span><span class="nav-logo-letter">W</span>
       </a>
       <a href="#kontakt" class="btn btn-primary btn-nav nav-cta-mobile">Anfragen</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen">
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menü öffnen">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
@@ -140,14 +140,20 @@
         <div class="hero-content">
           <h1 class="hero-title">Spenglerei Wögini</h1>
           <p class="hero-slogan">»Von Hand mit Herz aus Meisterhand«</p>
-          <div class="hero-carousel" aria-label="Qualifikationen">
-            <div class="hero-carousel-track">
-              <span>Spengler Meister</span>
-              <span>Klempner Meister</span>
-              <span>Flaschner Meister</span>
-              <span>Blechner Meister</span>
-              <span>Bachelor Professional</span>
+          <div class="hero-carousel-row">
+            <div class="hero-carousel" aria-label="Qualifikationen">
+              <div class="hero-carousel-track">
+                <span>Spengler Meister</span>
+                <span>Klempner Meister</span>
+                <span>Flaschner Meister</span>
+                <span>Blechner Meister</span>
+                <span>Bachelor Professional</span>
+              </div>
             </div>
+            <button type="button" class="motion-toggle motion-toggle--sm hero-carousel-toggle" aria-pressed="false" aria-label="Animation der Qualifikationen pausieren">
+              <svg class="motion-toggle-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+              <svg class="motion-toggle-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
           </div>
           <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
         </div>
@@ -176,7 +182,7 @@
             </div>
             <h3>Dachentwässerung</h3>
             <p>Rinnen, Fallrohre & Ablaufsysteme – fachgerecht montiert für sichere Wasserableitung.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-1">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-1">Mehr erfahren</button>
             <div class="service-detail" id="detail-1" hidden>
               <ul>
                 <li>Herstellung und Montage von Dachrinnen & Fallrohren</li>
@@ -197,7 +203,7 @@
             </div>
             <h3>Dach & Fassade</h3>
             <p>Stehfalz, Blechdächer & Fassadenverkleidung – präzise Blecharbeit für Ihr Gebäude.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-2">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-2">Mehr erfahren</button>
             <div class="service-detail" id="detail-2" hidden>
               <ul>
                 <li>Blechdächer (Stehfalz, Winkelstehfalz, Doppelstehfalz)</li>
@@ -220,7 +226,7 @@
             </div>
             <h3>Flachdach & Abdichtung</h3>
             <p>Bitumen, Kunststoff & Flüssigkunststoff – dichte Lösungen für jedes Flachdach.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-3">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-3">Mehr erfahren</button>
             <div class="service-detail" id="detail-3" hidden>
               <ul>
                 <li>Abdichtungen mit Bitumen-, Kunststoff- & EPDM-Bahnen</li>
@@ -242,7 +248,7 @@
             </div>
             <h3>Kamin & Attika</h3>
             <p>Verkleidungen, Abdeckungen & Anschlüsse – professioneller Schutz für exponierte Bauteile.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-4">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-4">Mehr erfahren</button>
             <div class="service-detail" id="detail-4" hidden>
               <ul>
                 <li>Kaminverkleidungen & Kaminabdeckungen</li>
@@ -264,7 +270,7 @@
             </div>
             <h3>Blechbearbeitung</h3>
             <p>Kantteile, Sonderanfertigungen & Maßarbeit – individuell nach Ihren Anforderungen.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-5">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-5">Mehr erfahren</button>
             <div class="service-detail" id="detail-5" hidden>
               <ul>
                 <li>Zuschneiden, Kanten, Biegen & Falzen</li>
@@ -285,7 +291,7 @@
             </div>
             <h3>Wartung & Inspektion</h3>
             <p>Reparaturen, Dachkontrollen & Drohnenaufnahmen – damit Ihr Dach in Schuss bleibt.</p>
-            <button class="service-card-btn" aria-expanded="false" aria-controls="detail-6">Mehr erfahren</button>
+            <button type="button" class="service-card-btn" aria-expanded="false" aria-controls="detail-6">Mehr erfahren</button>
             <div class="service-detail" id="detail-6" hidden>
               <ul>
                 <li>Jährliche Dachkontrollen</li>
@@ -307,7 +313,7 @@
     <section class="galerie" id="galerie">
       <div class="container" data-reveal="up">
         <h2 class="section-title">Unsere Arbeit</h2>
-        <p class="section-subtitle">Einblicke in aktuelle Projekte</p>
+        <p class="section-subtitle">Einblicke in aktuelle Projekte<button type="button" class="motion-toggle motion-toggle--sm gallery-toggle" aria-pressed="false" aria-label="Automatisches Durchlaufen der Galerie pausieren"><svg class="motion-toggle-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg><svg class="motion-toggle-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></p>
       </div>
       <div class="gallery-strip">
         <div class="gallery-track">
@@ -507,15 +513,29 @@
     navToggle.addEventListener('click', () => {
       const expanded = navToggle.getAttribute('aria-expanded') === 'true';
       navToggle.setAttribute('aria-expanded', String(!expanded));
+      navToggle.setAttribute('aria-label', expanded ? 'Menü öffnen' : 'Menü schließen');
       navMenu.classList.toggle('is-open');
     });
     // Close menu on link click
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Menü öffnen');
         navMenu.classList.remove('is-open');
       });
     });
+
+    // Hero qualification carousel: pause/play toggle (WCAG 2.2.2)
+    const heroCarouselToggle = document.querySelector('.hero-carousel-toggle');
+    const heroCarouselTrack = document.querySelector('.hero-carousel-track');
+    if (heroCarouselToggle && heroCarouselTrack) {
+      heroCarouselToggle.addEventListener('click', () => {
+        const paused = heroCarouselToggle.getAttribute('aria-pressed') === 'true';
+        heroCarouselToggle.setAttribute('aria-pressed', String(!paused));
+        heroCarouselToggle.setAttribute('aria-label', paused ? 'Animation der Qualifikationen pausieren' : 'Animation der Qualifikationen fortsetzen');
+        heroCarouselTrack.classList.toggle('is-paused', !paused);
+      });
+    }
 
     // Service card expand/collapse
     document.querySelectorAll('.service-card-btn').forEach(btn => {
@@ -595,6 +615,17 @@
           captionDisplay.classList.remove('is-visible');
         }
       });
+
+      // Keyboard operability for non-decorative items (aria-hidden duplicates stay inert)
+      if (item.getAttribute('aria-hidden') !== 'true') {
+        item.setAttribute('tabindex', '0');
+        item.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            item.click();
+          }
+        });
+      }
     });
 
     // Gallery: auto-scroll + manual scroll/drag with infinite loop
@@ -603,6 +634,7 @@
       if (!strip) return;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       let autoScroll = !prefersReducedMotion;
+      let galleryPausedByControl = false;
       let speed = 1;
       let dragging = false;
       let isAutoScrolling = false;
@@ -627,7 +659,7 @@
 
       // Auto-scroll loop — only runs when gallery is in viewport
       function tick() {
-        if (autoScroll && !dragging && !galleryPausedByClick) {
+        if (autoScroll && !dragging && !galleryPausedByClick && !galleryPausedByControl) {
           isAutoScrolling = true;
           strip.scrollLeft += speed;
           wrapScroll();
@@ -725,6 +757,18 @@
           autoScroll = true;
         }
       });
+
+      // Pause/play toggle for the auto-scrolling gallery (WCAG 2.2.2)
+      const galleryToggle = document.querySelector('.gallery-toggle');
+      if (galleryToggle) {
+        galleryToggle.addEventListener('click', () => {
+          galleryPausedByControl = !galleryPausedByControl;
+          galleryToggle.setAttribute('aria-pressed', String(galleryPausedByControl));
+          galleryToggle.setAttribute('aria-label', galleryPausedByControl
+            ? 'Automatisches Durchlaufen der Galerie fortsetzen'
+            : 'Automatisches Durchlaufen der Galerie pausieren');
+        });
+      }
     })();
     }); });
   </script>
