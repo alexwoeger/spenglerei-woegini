@@ -571,6 +571,19 @@
     );
     revealEls.forEach(el => revealObs.observe(el));
 
+    // Reveal target section immediately when clicking anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.querySelectorAll('[data-reveal]:not(.is-visible), [data-reveal-stagger]:not(.is-visible)').forEach(el => {
+            el.classList.add('is-visible');
+            revealObs.unobserve(el);
+          });
+        }
+      });
+    });
+
     // Gallery: click to show/hide caption + pause carousel
     let galleryPausedByClick = false;
     let galleryDragged = false;
