@@ -755,8 +755,6 @@ a:hover {
   padding: var(--space-20) 0;
   background-color: var(--color-surface);
   position: relative;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
 }
 
 .services-grid {
@@ -939,8 +937,6 @@ a:hover {
   padding: var(--space-20) 0;
   background-color: var(--color-surface);
   position: relative;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 700px;
 }
 
 /* Subtle texture */
@@ -2065,8 +2061,6 @@ a:hover {
 .kundenstimmen {
   padding: var(--space-20) 0;
   background-color: var(--color-surface-alt);
-  content-visibility: auto;
-  contain-intrinsic-size: auto 400px;
 }
 
 .testimonials-grid {
